@@ -8,8 +8,7 @@ from pages.product_page import ProductPage
 
 class TestUserAddToBasketFromProductPage:
 
-    @pytest.fixture(scope="function", autouse=True)
-    def setup(self):
+    def setup_method(self):
         email = str(time.time()) + '@fakemail.com'
         password = 'thisispassword'
         LoginPage()\
